@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ResumenController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,8 @@ Route::get('/resumenes', [ResumenController::class, 'listarResumenes']); // List
 
 Route::get('/resumen', [ResumenController::class, 'mostrarFormulario'])->name('formResumen');
 Route::post('/resumen', [ResumenController::class, 'generarResumen'])->name('generarResumen');
+
+Route::get('/noticias', [NewsController::class, 'index'])->name('noticias.index');
+Route::get('/noticias/categoria/{categoria}', [NewsController::class, 'porCategoria'])->name('noticias.categoria');
+Route::get('/noticias/scrape', [NewsController::class, 'scrape'])->name('noticias.scrape');
+Route::get('/test-scraping', [NewsController::class, 'test'])->name('noticias.test');
