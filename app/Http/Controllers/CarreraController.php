@@ -9,10 +9,14 @@ class CarreraController extends Controller
 {
     public function index()
     {
-        // Obtener todas las carreras con sus respectivas misiones y visiones
-        $carreras = Carrera::all(['nombre', 'mision', 'vision']);
-
-        // Pasar los datos a la vista
+        $carreras = Carrera::all();
         return view('carreras.index', compact('carreras'));
+    }
+
+    public function show($id)
+    {
+        // Obtener la carrera junto con sus autoridades
+        $carrera = Carrera::with('autoridades')->findOrFail($id);
+        return view('carreras.show', compact('carrera'));
     }
 }

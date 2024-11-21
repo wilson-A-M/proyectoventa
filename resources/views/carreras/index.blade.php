@@ -8,7 +8,9 @@
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <div class="card-header">
-                        <h5 class="card-title">{{ $carrera->nombre }}</h5>
+                        <h5 class="card-title">
+                            <a href="{{ route('carreras.show', $carrera->id) }}" class="text-white">{{ $carrera->nombre }}</a>
+                        </h5>
                     </div>
                     <div class="card-body">
                         <h6 class="card-subtitle mb-2 text-muted">Misión</h6>

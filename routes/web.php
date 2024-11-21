@@ -47,3 +47,4 @@ Route::get('/test-scraping', [NewsController::class, 'test'])->name('noticias.te
 
 
 Route::get('/carreras', [CarreraController::class, 'index'])->name('carreras.index');
+Route::get('/carreras/{id}', [CarreraController::class, 'show'])->name('carreras.show');
