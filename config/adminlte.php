@@ -318,8 +318,8 @@ return [
             'can' => 'manage-blog',
         ],
         [
-            'text' => 'HOLA',
-            'url' => 'admin/pages',
+            'text' => 'NOTICIAS',
+            'url' => '/noticias',
             'icon' => 'far fa-fw fa-file',
             'label' => 5,
             'label_color' => 'success',
@@ -387,7 +387,7 @@ return [
   
         [
             'text' => 'TITULADOR',
-             'url' => 'admin/pages',
+             'url' => '/resumen',
             'icon' => 'far fa-fw fa-file',
             'label_color' => 'success',
         ],

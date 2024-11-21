@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de Resúmenes</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
 
-<body>
-    <div class="container mt-5">
+@extends('adminlte::page')
+
+@section('title', 'MENU')
+
+@section('content_header')
+    <h1>UPEA TELEVISION</h1>
+        <div class="container mt-5">
         <h1 class="text-center">Generador de Resúmenes</h1>
         <form id="resumenForm" action="{{ route('generarResumen') }}" method="POST">
             @csrf
@@ -35,7 +32,17 @@
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+@stop
 
-</html>
+@section('content')
+    
+@stop
+
+@section('css')
+    {{-- Add here extra stylesheets --}}
+    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
+@stop
+
+@section('js')
+    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+@stop

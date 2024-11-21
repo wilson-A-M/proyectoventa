@@ -1,6 +1,10 @@
-@extends('layouts.app')
 
-@section('content')
+@extends('adminlte::page')
+
+@section('title', 'MENU')
+
+@section('content_header')
+
 <div class="container">
     <div class="row">
         <div class="col-12 mb-4">
@@ -38,3 +42,16 @@
     </div>
 </div>
 @endsection
+
+@section('content')
+    
+@stop
+
+@section('css')
+    {{-- Add here extra stylesheets --}}
+    {{-- <link rel="stylesheet" href="/css/admin_custom.css"> --}}
+@stop
+
+@section('js')
+    <script> console.log("Hi, I'm using the Laravel-AdminLTE package!"); </script>
+@stop
