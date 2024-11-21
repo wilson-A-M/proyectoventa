@@ -1,5 +1,7 @@
 <?php
 
+use SebastianBergmann\Type\TrueType;
+
 return [
 
     /*
@@ -14,8 +16,8 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
-    'title_prefix' => '',
+    'title' => '',
+    'title_prefix' => 'UPEA TELEVISION |',
     'title_postfix' => '',
 
     /*
@@ -30,7 +32,7 @@ return [
     |
     */
 
-    'use_ico_only' => false,
+    'use_ico_only' => true,
     'use_full_favicon' => false,
 
     /*
@@ -64,7 +66,7 @@ return [
     */
 
     'logo' => 'TV UPEA',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo_img' => 'vendor/adminlte/dist/img/TV.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -86,7 +88,7 @@ return [
     'auth_logo' => [
         'enabled' => false,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'vendor/adminlte/dist/img/TV.png',
             'alt' => 'Auth Logo',
             'class' => '',
             'width' => 50,
@@ -113,7 +115,7 @@ return [
         'enabled' => true,
         'mode' => 'fullscreen',
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'vendor/adminlte/dist/img/TV.png',
             'alt' => 'AdminLTE Preloader Image',
             'effect' => 'animation__shake',
             'width' => 60,
@@ -134,7 +136,7 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
+    'usermenu_header' => true,
     'usermenu_header_class' => 'bg-primary',
     'usermenu_image' => false,
     'usermenu_desc' => false,
@@ -154,10 +156,10 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_sidebar' => true,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
-    'layout_dark_mode' => null,
+    'layout_dark_mode' => True,
 
     /*
     |--------------------------------------------------------------------------
@@ -171,12 +173,12 @@ return [
     |
     */
 
-    'classes_auth_card' => 'card-outline card-primary',
+    'classes_auth_card' => 'bg-gradien-dark',
     'classes_auth_header' => '',
-    'classes_auth_body' => '',
-    'classes_auth_footer' => '',
-    'classes_auth_icon' => '',
-    'classes_auth_btn' => 'btn-flat btn-primary',
+    'classes_auth_body' => 'bg-gradient-dark',
+    'classes_auth_footer' => 'text-center',
+    'classes_auth_icon' => 'btn-flat text-light',
+    'classes_auth_btn' => 'btn-flat btn-light',
 
     /*
     |--------------------------------------------------------------------------
@@ -198,7 +200,7 @@ return [
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-dark navbar-dark',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -316,10 +318,10 @@ return [
             'can' => 'manage-blog',
         ],
         [
-            'text' => 'pages',
+            'text' => 'HOLA',
             'url' => 'admin/pages',
             'icon' => 'far fa-fw fa-file',
-            'label' => 4,
+            'label' => 5,
             'label_color' => 'success',
         ],
         [
@@ -327,51 +329,69 @@ return [
         ],
         [
             'text' => 'USUARIOS',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-cloud',
+            'submenu' => [
+                [
+                    'text' => 'USUARIOS',
+                    'url' => '#',
+                ],
+                [
+                    'text' => 'ROLES',
+                    'url' => '#',
+                ],
+            ],
         ],
         [
             'text' => 'CARRERAS',
             'icon' => 'fas fa-fw fa-cloud',
             'submenu' => [
                 [
-                    'text' => 'productos',
+                    'text' => 'AREA CIENCIAS DE LA SALUD',
                     'url' => '#',
                 ],
                 [
-                    'text' => 'categorias',
+                    'text' => 'AREA INGENIERIA DESARROLLO TECNOLOGICO PRODUCTIVO',
                     'url' => '#',
                 ],
-            ],
+                [
+                    'text' => 'AREA CIENCIAS ECONOMICAS, FINANCIERAS Y ADMINISTRATIVAS',
+                    'url' => '#',
+                ],
+                [
+                    'text' => 'AREA CIENCIAS AGRICOLAS, PECUARIAS Y RECURSOS NATURALES',
+                    'url' => '#',
+                ],
+                [
+                    'text' => 'AREA CIENCIAS SOCIALES',
+                    'url' => '#',
+                ],
+                [
+                    'text' => 'AREA CIENCIAS ECONOMICAS EDUCACION',
+                    'url' => '#',
+                ],
+                [
+                    'text' => 'AREA CIENCIAS Y ARTES DEL HABITAT',
+                    'url' => '#',
+                ],
+                [
+                    'text' => 'AREA CIENCIAS Y TECNOLOGIA',
+                    'url' => '#',
+                ],
+                [
+                    'text' => 'CARRERA SIN AREA',
+                    'url' => '#',
+                ],
+
+            ], 
         ],
+  
         [
-            'text' => 'PERIODICOS',
-            'icon' => 'fas fa-fw fa-suitcase',
-            'submenu' => [
-                [
-                    'text' => 'enfe',
-                    'url' => '#',
-                ],
-                [
-                    'text' => 'Proveedores',
-                    'url' => '#',
-                ],
-            ],
+            'text' => 'TITULADOR',
+             'url' => 'admin/pages',
+            'icon' => 'far fa-fw fa-file',
+            'label_color' => 'success',
         ],
-        [
-            'text' => 'JEFE DE PISO',
-            'icon' => 'fas fa-fw fa-coffee',
-            'submenu' => [
-                [
-                    'text' => 'General',
-                    'url' => '#',
-                ],
-                [
-                    'text' => 'Icons',
-                    'url' => '#',
-                ],
-            ],
-        ],
+        
         [
             'header' => 'Seguridad'
         ],
