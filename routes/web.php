@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CarreraController;
 use App\Http\Controllers\ResumenController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
@@ -43,3 +44,6 @@ Route::get('/noticias/categoria/{categoria}'
 , [NewsController::class, 'porCategoria'])->name('noticias.categoria');
 Route::get('/noticias/scrape', [NewsController::class, 'scrape'])->name('noticias.scrape');
 Route::get('/test-scraping', [NewsController::class, 'test'])->name('noticias.test');
+
+
+Route::get('/carreras', [CarreraController::class, 'index'])->name('carreras.index');
