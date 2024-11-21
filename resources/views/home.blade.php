@@ -8,6 +8,7 @@
 
 @section('content')
     <p>PANEL DE CARRERA</p>
+    
 @stop
 
 @section('css')
